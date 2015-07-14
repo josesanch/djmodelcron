@@ -70,11 +70,10 @@ class Cron(TimeStampedModel):
     title = models.CharField(max_length=125)
     start = models.DateTimeField()
     enabled = models.BooleanField(default=True)
-    creator = models.ForeignKey(User, null=True, blank=True, verbose_name=_("creator"),
-                                related_name='creator')
+
     repetition = models.ForeignKey(Repetition, null=True, blank=True)
 
-    # Relación genérica
+    # Generic relation
     content_type = models.ForeignKey(ContentType, null=True)
     object_id = models.PositiveIntegerField(null=True)
     content_object = generic.GenericForeignKey('content_type', 'object_id')
