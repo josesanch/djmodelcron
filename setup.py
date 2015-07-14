@@ -16,7 +16,9 @@ setup(
     long_description=open('README.rst').read(),
     url='https://github.com/josesanch/djmodelcron',
     platforms="All platforms",
-
+    install_requires=[
+        'celery',
+    ],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
