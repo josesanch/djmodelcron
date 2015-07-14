@@ -1,6 +1,5 @@
 from django.contrib import admin
 
-from .models import Cron, Repetition
+from .models import Cron
 
 admin.site.register(Cron)
-admin.site.register(Repetition)
