@@ -23,9 +23,18 @@ Using it
    ...
    'djmodelcron',
    )
+  
 
-   from djmodelcron import Cron
+   CELERYBEAT_SCHEDULE = {
+    'add-every-minute': {
+        'task': 'cron',
+        'schedule': crontab(),
+     },
+    }
 
+
+   # In your models.py
+   from djmodelcron.models import Cron
    
    class MyModel(models.Model):
     title = models.CharField(max_length=125)
