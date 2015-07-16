@@ -11,7 +11,10 @@ method in the instances of any model in your django applications.
 How to use
 ----------
 
+Install djmodelcron and django-recurrence.
+
 You need to add a generic relation to the cron model of the djmodelcron app.
+
 
 
 Using it
@@ -20,8 +23,9 @@ Using it
 .. code-block:: python
                 
    INSTALLED_APPS = (
-   ...
-   'djmodelcron',
+                ...
+                'djmodelcron',
+                'recurrence'
    )
   
 
