@@ -13,6 +13,7 @@ How to use
 
 Install djmodelcron and django-recurrence.
 
+
 You need to add a generic relation to the cron model of the djmodelcron app.
 
 
@@ -25,16 +26,9 @@ Using it
    INSTALLED_APPS = (
                 ...
                 'djmodelcron',
-                'recurrence'
+                'recurrence',
    )
   
-
-   CELERYBEAT_SCHEDULE = {
-    'add-every-minute': {
-        'task': 'cron',
-        'schedule': crontab(),
-     },
-    }
 
 
    # In your models.py
